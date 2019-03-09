@@ -52,7 +52,11 @@ group by mb_set;
 -- Calculate sum of size(mb_set) and size(collect_set(ac_num))
 -- Ans: 14
 
--- Total Unique records are 13 but we are getting 14 elements. Since there is a difference of one and the array generated from the collect_set function cannot have duplicate values, we can safely assume that the collect_set table has two different rows having the same element. Since the two rows have the same element, they denote the same user. Subtract the excess row.
+-- Total Unique records are 13 but we are getting 14 elements. 
+-- Since there is a difference of one and the array generated from the collect_set function
+-- cannot have duplicate values, we can safely assume that the collect_set table has 
+-- two different rows having the same element. Since the two rows have the same element,
+-- they denote the same user. Subtract the excess row.
 -- 4 - (14-13) = 3
 
-/* There are 3 unique users. */
+/* ANSWER: There are 3 unique users. */
